@@ -1,16 +1,19 @@
 package quizGame;
 
 public class Score {
+	
+	double score = 0;
+	double percent = 0;
 	public void increaseScore()
 	{
-		
+		score++;
 	}
-	public double calculatePercentage()
+	public void calculatePercentage(int questionTotal)
 	{
-		
+		percent = score / questionTotal;
 	}
-	public double displayFinalScore()
+	public String displayFinalScore()
 	{
-		
+		return "Final Score: " + percent + "%";
 	}
 }
