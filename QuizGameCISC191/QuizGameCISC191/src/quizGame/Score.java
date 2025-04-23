@@ -2,8 +2,13 @@ package quizGame;
 
 public class Score {
 	
-	double score = 0;
-	double percent = 0;
+	private double score;
+	private double percent;
+	public Score()
+	{
+		score = 0;
+		percent = 0;
+	}
 	public void increaseScore()
 	{
 		score++;
