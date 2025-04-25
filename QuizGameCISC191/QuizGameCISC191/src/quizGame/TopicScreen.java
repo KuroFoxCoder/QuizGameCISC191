@@ -1,12 +1,17 @@
 package quizGame;
 
+import javax.swing.*;
+import java.awt.BorderLayout;
 
-public class TopicScreen 
+public class TopicScreen extends JFrame
 {
-	
+	private JFrame topicScreen;
 	private String chosenTopic;
-	private String[] topics;
-	
+	private String[] topics = {"Basketball","Pokemon","Gundam","KOF"};
+	public TopicScreen()
+	{
+		
+	}
 	public void displayTopics()
 	{
 		
@@ -14,7 +19,7 @@ public class TopicScreen
 	}
 	public void selectTopic() 
 	{
-		
+		chosenTopic = null;
 	}
 	
 }

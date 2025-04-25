@@ -15,6 +15,6 @@ public class QuizTimer
 	}
 	public void endTimer() //This will stop the in-game timer
 	{
-		
+		timer.cancel();
 	}
 }

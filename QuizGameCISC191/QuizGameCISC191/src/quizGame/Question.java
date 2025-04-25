@@ -1,5 +1,8 @@
 package quizGame;
 
+import java.io.File;
+import java.util.Scanner;
+
 public class Question 
 {
 	public String getQuestionText() //This method will get the text for a question.
