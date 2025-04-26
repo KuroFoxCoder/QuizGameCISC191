@@ -7,15 +7,15 @@ import java.awt.GridLayout;
 public class QuizGame extends JFrame
 {
 	private Question quizQuestion;
-	private JLabel questionLabel = new JLabel();
-	private JLabel answerLabelOne = new JLabel();
-	private JLabel answerLabelTwo = new JLabel();
-	private JLabel answerLabelThree = new JLabel();
-	private JLabel answerLabelFour = new JLabel();
+	private JLabel questionLabel = new JLabel("Test Question");
+	private JLabel answerLabelOne = new JLabel("Test Answer One");
+	private JLabel answerLabelTwo = new JLabel("Test Answer Two");
+	private JLabel answerLabelThree = new JLabel("Test Answer Three");
+	private JLabel answerLabelFour = new JLabel("Test Answer Four");
 	private String answer;
 	private QuizTimer gameTime;
 	private Score score;
-	private TopicScreen topicScreen = new TopicScreen();
+	private TopicScreen topicScreen;
 	
 	public QuizGame() //Constructor that will put together the GUI
 	{
@@ -35,17 +35,23 @@ public class QuizGame extends JFrame
 		answerButtonPanel.add(answerFour);
 		this.add(answerButtonPanel, BorderLayout.WEST);
 		
+		JPanel answerPanel = new JPanel();
+		answerPanel.add(answerLabelOne);
+		answerPanel.add(answerLabelTwo);
+		answerPanel.add(answerLabelThree);
+		answerPanel.add(answerLabelFour);
+		this.add(answerPanel, BorderLayout.CENTER);
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		pack();
 		setVisible(true);
 	}
 	public static void main(String[] args) //This will run the topic screen first, and based on the choices made, 
 	{
-		
+		new TopicScreen();
 	}
 	public void startGame() //This method will start the game's code and make the game's main GUI appear.
 	{
-		topicScreen.displayTopics();
 		String topic = topicScreen.selectTopic();
 		switch(topic) 
 		{

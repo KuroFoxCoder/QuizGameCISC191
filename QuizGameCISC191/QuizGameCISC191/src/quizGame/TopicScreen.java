@@ -8,7 +8,7 @@ public class TopicScreen extends JFrame
 	private JFrame topicScreen;
 	private String chosenTopic;
 	private String[] topics = {"Basketball","Pokemon","Gundam","KOF"};
-	public void displayTopics()
+	public TopicScreen()
 	{
 		this.setLayout(new BorderLayout());
 		JPanel instructions = new JPanel();
@@ -25,7 +25,7 @@ public class TopicScreen extends JFrame
 		JButton topicPicker = new JButton();
 		topicPicker.setText("Pick Topic");
 		buttonPanel.add(topicPicker);
-		this.add(buttonPanel);
+		this.add(buttonPanel, BorderLayout.SOUTH);
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		pack();
