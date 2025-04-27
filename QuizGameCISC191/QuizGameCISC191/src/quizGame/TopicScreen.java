@@ -7,6 +7,7 @@ public class TopicScreen extends JFrame
 {
 	private JFrame topicScreen;
 	private String chosenTopic;
+	private QuizGame newGame;
 	private String[] topics = {"Basketball","Pokemon","Gundam","KOF"};
 	public TopicScreen()
 	{
@@ -18,12 +19,17 @@ public class TopicScreen extends JFrame
 		
 		JPanel menuPanel = new JPanel();
 		JComboBox<String> topicMenu = new JComboBox<String>();
+		for(int i = 0; i < topics.length;i++)
+		{
+			topicMenu.addItem(topics[i]);
+		}
 		menuPanel.add(topicMenu);
 		this.add(menuPanel, BorderLayout.CENTER);
 		
 		JPanel buttonPanel = new JPanel();
 		JButton topicPicker = new JButton();
 		topicPicker.setText("Pick Topic");
+		topicPicker.addActionListener(e -> {this.selectTopic(topicMenu.getSelectedItem().toString());});
 		buttonPanel.add(topicPicker);
 		this.add(buttonPanel, BorderLayout.SOUTH);
 		
@@ -31,10 +37,12 @@ public class TopicScreen extends JFrame
 		pack();
 		setVisible(true);
 	}
-	public String selectTopic() 
+	public void selectTopic(String picked) 
 	{
-		chosenTopic = null;
-		return chosenTopic;
+		chosenTopic = picked;
+		System.out.println(chosenTopic);
+		new QuizGame(chosenTopic);
+		this.dispose();
 	}
 	
 }

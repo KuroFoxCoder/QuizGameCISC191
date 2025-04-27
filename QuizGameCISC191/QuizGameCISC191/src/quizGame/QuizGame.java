@@ -17,7 +17,7 @@ public class QuizGame extends JFrame
 	private Score score;
 	private TopicScreen topicScreen;
 	
-	public QuizGame() //Constructor that will put together the GUI
+	public QuizGame(String topic) //Constructor that will put together the GUI
 	{
 		this.setLayout(new BorderLayout());
 		JPanel questionPanel = new JPanel();
@@ -50,18 +50,22 @@ public class QuizGame extends JFrame
 	{
 		new TopicScreen();
 	}
-	public void startGame() //This method will start the game's code and make the game's main GUI appear.
+	public void startGame(String picked) //This method will start the game's code and make the game's main GUI appear.
 	{
-		String topic = topicScreen.selectTopic();
+		String topic = picked;
 		switch(topic) 
 		{
 			case "Basketball":
+				new QuizGame(topic);
 				break;
 			case "Gundam":
+				new QuizGame(topic);
 				break;
 			case "KOF":
+				new QuizGame(topic);
 				break;
 			case "Pokemon":
+				new QuizGame(topic);
 				break;
 		}
 	}
