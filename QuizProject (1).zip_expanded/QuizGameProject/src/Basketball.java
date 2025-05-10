@@ -26,28 +26,28 @@ public class Basketball extends Topic {
      */
     @Override
     public Question[] getQuestions() {
-    	int maxQuestions = 8; //Amount of questions for the quiz
+    	int maxQuestions = 20; //Amount of questions for the quiz
     	int maxAnswers = 4; //There are 4 options for each question
-    	Scanner qScan = null; //Initialize Scanners to make compiler happy
-    	Scanner oScan = null;
-    	Scanner aScan = null;
-    	String[] qArray = new String[maxQuestions]; //Initialize question and correct answer String arrays, as well as initialize a Question array to put it all together
-    	String[] aArray = new String[maxQuestions];
+    	Scanner questionScanner = null; //Initialize Scanners to make compiler happy
+    	Scanner optionScanner = null;
+    	Scanner answerScanner = null;
+    	String[] questionArray = new String[maxQuestions]; //Initialize question and correct answer String arrays, as well as initialize a Question array to put it all together
+    	String[] answerArray = new String[maxQuestions];
     	Question[] fun = new Question[maxQuestions];
         try
         {
-        	qScan = new Scanner(new File("BasketballQuestions.txt")); //Open respective text files for questions, options, and answers
-        	oScan = new Scanner(new File("BasketballOptions.txt"));
-        	aScan = new Scanner(new File("BasketballAnswers.txt"));
-        	for(int i=0;i<maxQuestions;i++) //Use a for loop to add questions and correct answers to respective arrays.
+        	questionScanner = new Scanner(new File("BasketballQuestions.txt"));
+        	optionScanner = new Scanner(new File("BasketballOptions.txt"));
+        	answerScanner = new Scanner(new File("BasketballAnswers.txt"));
+        	for(int i=0;i<maxQuestions;i++)
         	{
         		String[] tempArray = new String[maxAnswers]; //Establish a temporary array within the loop, initialized to 4 elements
         		String temp; //A temp String variable for use to make tempArray
-        		qArray[i] = qScan.nextLine().toString(); //Add question text to question String array
-        		temp = oScan.nextLine().toString(); //Assign a single string line to the temp String
-        		aArray[i] = aScan.nextLine().toString(); //Add correct answers to correct answer String array
+        		questionArray[i] = questionScanner.nextLine().toString(); //Add question text to question String array
+        		temp = optionScanner.nextLine().toString(); //Assign a single string line to the temp String
+        		answerArray[i] = answerScanner.nextLine().toString(); //Add correct answers to correct answer String array
         		tempArray = temp.split(", "); //Make a String array surrounding instances of ", " a comma and space after, to make an array of a question's options
-        		fun[i] = new Question(qArray[i],tempArray,aArray[i]); //Put the question, options, and correct answer together into a single Question class object
+        		fun[i] = new Question(questionArray[i],tempArray,answerArray[i]); //Put the question, options, and correct answer together into a single Question class object
      
         	}
         }
@@ -57,11 +57,17 @@ public class Basketball extends Topic {
         }
     	finally
     	{
-    		if(qScan != null && oScan != null && aScan != null) //If Scanners were opened successfully, close them all.
+    		if(questionScanner != null)//If Scanners were opened successfully, close them all.
     		{
-    			qScan.close();
-    			oScan.close();
-    			aScan.close();
+    			questionScanner.close();
+    		}
+    		if(optionScanner != null)
+    		{
+    			optionScanner.close();
+    		}
+    		if(answerScanner != null)
+    		{
+    			answerScanner.close();
     		}
     		else //If one of the scanners didn't open correctly, return an array of 2 questions.
     		{
