@@ -1,0 +1,20 @@
+Michael Jordan, LeBron James, Kobe Bryant, Magic Johnson
+5, 6, 7, 8
+Boston Celtics, LA Lakers, Chicago Bulls, Golden State Warriors
+10 feet, 12 feet, 8 feet, 9 feet
+Wilt Chamberlain, Michael Jordan, Shaquille O’Neal, LeBron James
+The Finals, The Super Bowl, March Madness, The Showdown
+LeBron James, Kareem Abdul-Jabbar, Karl Malone, Michael Jordan
+Charlotte Hornets, LA Lakers, Philadelphia 76ers, Indiana Pacers
+48 minutes, 40 minutes, 60 minutes, 36 minutes
+Traveling, Double Dribble, Foul, Shot Clock Violation
+Nikola Jokic, Giannis Antetokounmpo, LeBron James, Stephen Curry
+UCLA, Duke, North Carolina, Kentucky
+Block, Steal, Dunk, Layup
+Point Guard, Shooting Guard, Center, Small Forward
+Chicago Bulls, Chicago Kings, Illinois Panthers, Windy City Stars
+24 seconds, 30 seconds, 20 seconds, 15 seconds
+Tim Duncan, Kevin Garnett, Dirk Nowitzki, Shaquille O’Neal
+USA, Spain, Australia, France
+WNBA, NBA, NCAA, FIBA
+Clippers, Lakers, Kings, Celtics

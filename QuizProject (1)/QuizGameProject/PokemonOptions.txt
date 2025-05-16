@@ -1,0 +1,20 @@
+Electric, Water, Fire, Normal
+Bulbasaur, Pikachu, Charmander, Mew
+Water Stone, Fire Stone, Thunder Stone, Leaf Stone
+Pikachu, Bulbasaur, Charmander, Squirtle
+Koffing, Gengar, Onix, Weezing
+Sinnoh, Hoenn, Johto, Kanto
+Arceus, Mew, Mewtwo, Dialga
+Dragonite, Charizard, Garchomp, Lapras
+100, 50, 99, 75
+Magikarp, Feebas, Tentacool, Seadra
+Sing, Sleep Powder, Snore, Growl
+Electric, Grass, Ground, Fire
+Poké Ball, Digivice, Pokédex, Great Ball
+Dialga, Zapdos, Articuno, Ho-Oh
+Max Revive, Potion, Antidote, Rare Candy
+Lt. Surge, Misty, Erika, Brock
+Rock Climbing, Trading, Happiness, Leveling
+Charmander, Cyndaquil, Torchic, Chimchar
+Sword & Shield, Sun & Moon, Diamond & Pearl, X & Y
+'Prepare for trouble...', 'Make it double!', 'To protect the world from devastation!', 'So you can run, but you can’t hide!'
