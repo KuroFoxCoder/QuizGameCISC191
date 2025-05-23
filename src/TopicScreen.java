@@ -24,6 +24,8 @@ public class TopicScreen {
     /**
      * Constructor: Builds the topic selection window and initializes event handling.
      */
+    //String to send to Topic to construct quiz from
+    String chosenTopic;
     public TopicScreen() {
         // Create the main window
         JFrame frame = new JFrame("Choose Your Topic");
@@ -37,28 +39,33 @@ public class TopicScreen {
         JButton btnGundam = new JButton("Gundam");
         JButton btnKOF = new JButton("King of Fighters");
 
+
         // When Pokémon is selected, launch a new QuizGame with Pokemon questions
         btnPokemon.addActionListener(e -> {
             frame.dispose(); // Close this window
-            new QuizGame(new Pokemon()); // Start game
+            chosenTopic = "Pokemon";
+            new QuizGame(new Pokemon(chosenTopic)); // Start game
         });
 
         // When Basketball is selected
         btnBasketball.addActionListener(e -> {
             frame.dispose();
-            new QuizGame(new Basketball());
+            chosenTopic = "Basketball";
+            new QuizGame(new Basketball(chosenTopic));
         });
 
         // When Gundam is selected
         btnGundam.addActionListener(e -> {
             frame.dispose();
-            new QuizGame(new Gundam());
+            chosenTopic = "Gundam";
+            new QuizGame(new Gundam(chosenTopic));
         });
 
         // When KOF is selected
         btnKOF.addActionListener(e -> {
             frame.dispose();
-            new QuizGame(new KOF());
+            chosenTopic = "Kof";
+            new QuizGame(new KOF(chosenTopic));
         });
 
         // Add all buttons to the frame (GUI)
