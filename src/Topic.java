@@ -79,9 +79,14 @@ public abstract class Topic {
 
         for (int i = 0; i < questionLines.length; i++) {
             String questionText = questionLines[i];
-            String[] options = optionLines[i].split(", "); // Assumes consistent format: "A, B, C, D"
-            String correctAnswer = answerLines[i].trim(); // Remove whitespace/newlines
 
+            // Split options using ", " delimiter (assumes consistent formatting)
+            String[] options = optionLines[i].split(", ");
+
+            // Trim and convert answer string to uppercase, then extract the first character
+            char correctAnswer = answerLines[i].trim().toUpperCase().charAt(0);
+
+            // Create and add the Question object
             questions.add(new Question(questionText, options, correctAnswer));
         }
 

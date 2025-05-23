@@ -25,7 +25,7 @@ public class Question {
     private String[] options;
 
     // The correct answer (represented by "A", "B", "C", or "D")
-    private String correctAnswer;
+    private char correctAnswer;
 
     /**
      * Constructor: Initializes the question text, answer options, and correct answer.
@@ -34,7 +34,7 @@ public class Question {
      * @param options       a String array containing four answer options
      * @param correctAnswer the correct answer represented by "A", "B", "C", or "D"
      */
-    public Question(String questionText, String[] options, String correctAnswer) {
+    public Question(String questionText, String[] options, char correctAnswer) {
         this.questionText = questionText;
         this.options = options;
         this.correctAnswer = correctAnswer;
@@ -66,6 +66,6 @@ public class Question {
      * @return true if the answer is correct, false otherwise
      */
     public boolean isCorrectAnswer(String userAnswer) {
-        return correctAnswer.equalsIgnoreCase(userAnswer);
+        return !userAnswer.isEmpty() && Character.toUpperCase(userAnswer.charAt(0)) == correctAnswer;
     }
 }
